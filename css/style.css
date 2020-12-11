@@ -23,6 +23,15 @@ a {
 .primaryText {
   color: #56a79a;
 }
+.dark {
+  background-color: #333333;
+}
+.lightText {
+  color: white;
+}
+.darkText {
+  color: #cccccc;
+}
 /* Nav Bar */
 .mainNav {
   margin: 20px 0px;
@@ -38,7 +47,6 @@ a {
 }
 .mainNav .mainMenu {
   display: flex;
-  align-items: flex-start;
 }
 .mainNav .mainMenu li {
   padding-right: 20px;
@@ -53,13 +61,61 @@ a {
   border-bottom: 3px solid #56a79a;
 }
 
-@media (max-width: 768px) {
+/* Showcase */
+.showcase {
+  background: url("../images/showcase.jpg") center center/cover no-repeat;
+  height: 600px;
+  width: 100%;
+  border-top: solid 1px #56a79a;
+  border-bottom: solid 1px #56a79a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.showcase .content {
+  padding: 40px 55px;
+  border-radius: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.9;
+}
+.showcase .content .title {
+  margin-bottom: 20px;
+}
+.showcase .content .title h1 {
+  font-size: 50px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
   .mainNav ul {
-    justify-content: center;
     padding-top: 35px;
   }
   .mainNav > div {
     display: block;
     text-align: center;
+  }
+  .mainNav .branding {
+    flex: 1;
+  }
+  .mainNav .mainMenu {
+    justify-content: center;
+  }
+  .mainNav .mainMenu li {
+    margin: 0px 10px;
+  }
+  .showcase .content {
+    text-align: center;
+    padding: 20px 12px;
+  }
+  .showcase .content .title h1 {
+    font-size: 1.6rem;
+  }
+  .showcase .content .text p {
+    font-size: 0.9rem;
   }
 }
