@@ -10,7 +10,7 @@ body {
 }
 .container {
   width: 90%;
-  max-width: 1110px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 ul {
@@ -23,6 +23,9 @@ a {
 .primaryText {
   color: #56a79a;
 }
+.primary {
+  background: #56a79a;
+}
 .dark {
   background-color: #333333;
 }
@@ -34,7 +37,9 @@ a {
 }
 /* Nav Bar */
 .mainNav {
-  margin: 20px 0px;
+  margin: 10px 0px;
+  padding: 20px 0px;
+  border-bottom: 1px solid #56a79a;
 }
 .mainNav > div {
   display: flex;
@@ -66,7 +71,6 @@ a {
   background: url("../images/showcase.jpg") center center/cover no-repeat;
   min-height: 600px;
   width: 100%;
-  border-top: solid 1px #56a79a;
   border-bottom: solid 1px #56a79a;
   display: flex;
   justify-content: center;
@@ -117,8 +121,9 @@ a {
 /* Features Section */
 .features {
   margin: 20px 0px 0px 0px;
-/*   min-height: 600px;
- */  background: url("../images/info-bg.jpg") center 40px / cover no-repeat;
+  /*   min-height: 600px;
+ */
+  background: url("../images/info-bg.jpg") center 40px / cover no-repeat;
   padding: 40px;
 }
 .grid-2 {
@@ -187,14 +192,66 @@ a {
 
 footer {
   padding: 20px;
-  background: #56a79a;
   text-align: center;
+}
+
+/* About Us page */
+.about div h2,
+.about div p,
+.services h3,
+.services h2,
+.contact h2,
+.contact p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about div {
+  margin: 20px 0px;
+  border-bottom: 1px solid #888888;
+}
+
+/* Servies Page */
+.services {
+  padding: 40px;
+}
+.services h2 {
+  margin-bottom: 20px;
+}
+.services div {
+  padding: 30px;
+  text-align: center;
+}
+/* Contact Page */
+.contact{
+    margin-top: 40px;
+}
+.contact .myForm {
+  margin: 30px 0px;
+  padding: 20px 30px;
+  text-align: center;
+  display: grid;
+  grid-row-gap: 4px;
+  justify-items: center;
+}
+.contact .myForm label,
+.contact .myForm input {
+  display: block;
+  text-transform: uppercase;
+}
+.contact input {
+  width: 50%;
+  height: 35px;
+}
+.contact textarea,
+.contact a {
+  width: 50%;
 }
 /* Media query for responsiveness */
 @media (max-width: 768px) {
   .container {
-    width: 100%;
+    width: 95%;
   }
+
   .mainNav ul {
     padding-top: 35px;
   }
@@ -225,5 +282,8 @@ footer {
   .grid-3,
   .grid-2 {
     grid-template-columns: 1fr;
+  }
+  .contact input, .contact .myForm textarea, .contact .myForm a{
+      width: 80%;
   }
 }
